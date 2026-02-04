@@ -28,8 +28,9 @@ pdb:
 ##
 manager:
   image:
-    repository: ccr.ccs.tencentyun.com/tke-market/opentelemetry-operator
-    tag: v0.91.2
+#    repository: ccr.ccs.tencentyun.com/tke-market/opentelemetry-operator
+    repository: ccr.ccs.tencentyun.com/tapm/opentelemetry-operator
+    tag: v0.92.0
   collectorImage:
     repository: ccr.ccs.tencentyun.com/tke-market/opentelemetry-collector-contrib
     tag: 0.85.0
@@ -287,8 +288,6 @@ env:
   ## Required, obtained from the apm console
   APM_TOKEN: ""
   ENDPOINT: ""
-  API_REGION: ""
-
 
   ## Optional, default latest; If you want to specify the version, you can get it from the apm documentation
   JAVA_INSTR_VERSION: "latest"
@@ -301,9 +300,6 @@ env:
 
   ## Optional, default "false"; Set to "true" for integrating with APM service via internet endpoint
   FROM_INTERNET: "false"
-
-  ## Optional, default false; Set to true for directly creating instrumentation by helm.
-  DIRECTLY_CREATE_INSTRUMENTATION: false
 
 config:
   "java": "bwiefeunq4+28k5omTkgc3XQLHjDEh4aylntxj4NiVRsibnL5n4Kk0EHTYJPoXHe"
