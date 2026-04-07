@@ -264,6 +264,11 @@ nodeSelector: {}
 topologySpreadConstraints: []
 hostNetwork: false
 
+## Cluster network mode configuration
+## Optional value: "" (default, auto-detect), "cilium-overlay" (force enable)
+## In general, leaving the default values unchanged is sufficient.
+networkMode: ""
+
 # Allows for pod scheduler prioritisation
 priorityClassName: ""
 
